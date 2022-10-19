@@ -1,0 +1,38 @@
+<div class="container pt-5">
+    <div class="row justify-content-sm-center pt-5">
+        <div class="col-sm-6 shadow round pb-3">
+          <h1 class="text-center pt-3 text-secondary">Add Salary</h1>
+            <form [formGroup]="exform">
+              
+                <div class="form-group">
+                    <label class="col-form-label">Employee_Name:</label>
+                    <input formControlName="name" type="text" class="form-control" id = "name" [(ngModel)] = "salary.emp_name">
+                    <small *ngIf="name?.invalid && name?.touched" class="text-danger">Name is Required</small>
+                  </div>
+                <div class="form-group">
+                  <label class="col-form-label">Basic_Pay:</label>
+                  <input formControlName="basicpay" type="basicpay" class="form-control" id = "basic_pay" [(ngModel)] = "salary.basic_pay">
+                  <small *ngIf="basicpay?.invalid && basicpay?.touched" class="text-danger">Basic_Pay is Required</small>
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Deductions:</label>
+                  <input formControlName="deductions" type="deductions" class="form-control" id = "deductions" [(ngModel)] = "salary.deductions">
+                  <small *ngIf="deductions?.invalid && deductions?.touched" class="text-danger">Deductions is Required</small>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Net_Pay:</label>
+                    <input formControlName="netpay" type="netpay" class="form-control" id = "net_pay" [(ngModel)] = "salary.net_pay">
+                    <small *ngIf="netpay?.invalid && netpay?.touched" class="text-danger">Net_Pay is Required</small>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Month:</label>
+                    <input formControlName="month" type="text" class="form-control" id = "month" [(ngModel)] = "salary.month">
+                    <small *ngIf="month?.invalid && month?.touched" class="text-danger">Month is Required</small>
+                  </div>
+                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary add">Add</button>
+                <button mat-raised-button routerLink="../admin" class="back btn btn-danger " >Back</button>
+              <button mat-raised-button routerLink="../addsalary" class="back btn btn-success view" >View Salary</button>
+            </form>
+            </div>
+    </div>
+  </div>

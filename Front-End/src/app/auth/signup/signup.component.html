@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../../../assets/login_img.svg" height="100%" width="100%">
+        </div>
+        <div class="col-md-4 mt-3 mb-2">
+
+            <h3 class="text-success text-center welcome"><b>Welcome !</b></h3>
+
+            <form action="" class="mt-1 p-5">
+                <h4 class=" mb-3 text-success text-center"> New User ? Create account  here!</h4>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="name" [(ngModel)]="name">
+                    <label for="floatingInput">Full name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username" [(ngModel)]="username">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="cpassword">
+                    <label for="floatingPassword">Re-enter Password</label>
+                  </div>
+                  
+                    <button class="btn btn-success me-md-2" type="button" (click)="signup()" >Register</button>
+                  
+
+                  <a routerLink="/login" class="text-dark btn-warning btn" style="text-decoration: none;">LogIn</a>
+           
+                  <a routerLink="/explore" class="text-dark btn-info btn" style="text-decoration: none; margin-left: 10px;">Explore site ! </a>
+
+
+                </form>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>

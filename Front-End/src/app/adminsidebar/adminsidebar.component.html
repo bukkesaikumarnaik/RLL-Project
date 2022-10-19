@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav  #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar >Admin </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="create-employee">Add Employee</a>
+      <a mat-list-item href="create-salary">Add  Salary</a> 
+      <a mat-list-item href="create-attendance">Add Attendance</a>
+     <a mat-list-item href="create-schedule">Schedules</a>
+      <a mat-list-item href="create-leave">Check Leaves</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" style="position:fixed;">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button 
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon" >menu</mat-icon>
+      </button>
+      <span> Employee Payroll System</span>
+      <div class="spacer"></div>
+      <button class="btn btn-danger " style="position:fixed; right: 30px; height: 37px;" (click)="logout()">Logout</button>
+      <img src="https://www.crmjetty.com/wp-content/uploads/2021/07/salesforce_hero.png">
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

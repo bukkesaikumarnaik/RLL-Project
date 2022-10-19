@@ -1,0 +1,35 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span>Payroll Management</span>
+    <div class="spacer"></div>
+    <a mat-raised-button routerLink="../user" class="back btn btn-success">Home</a>
+</mat-toolbar>
+
+<div class="container">
+    <h2 style="margin-top: 10px; margin-bottom: 10px; padding: 30px;">Attendances</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> Employee_Name</th>
+            <th> Email</th>
+            <th> Date</th>  
+            <th> Status</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of attendance" >
+            <td> {{ employee.emp_id }} </td>
+            <td> {{ employee.emp_name }} </td>
+            <td> {{ employee.email}} </td>
+            <td> {{ employee.date }} </td>
+            <td> {{ employee.status}} </td>
+            
+            <td>
+                <button (click) = "attendanceDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

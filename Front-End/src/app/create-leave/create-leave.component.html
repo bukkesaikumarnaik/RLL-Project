@@ -1,0 +1,38 @@
+<div class="container pt-5">
+    <div class="row justify-content-sm-center pt-5">
+        <div class="col-sm-6 shadow round pb-3">
+          <h1 class="text-center pt-3 text-secondary">Add Your Leave here </h1>
+            <form [formGroup]="exform">
+                <div class="form-group">
+                    <label class="col-form-label">From-Date:</label>
+                    <input formControlName="fromdate" type="date" class="form-control" id = "from-date" [(ngModel)] = "leave.from_date">
+                    <small *ngIf="fromdate?.invalid && fromdate?.touched" class="text-danger">Frpm_Date is Required</small>
+                  </div>
+                <div class="form-group">
+                  <label class="col-form-label">To-Date:</label>
+                  <input formControlName="todate" type="date" class="form-control" id = "to-date" [(ngModel)] = "leave.to_date">
+                  <small *ngIf="todate?.invalid && todate?.touched" class="text-danger">To_Date is Required</small>
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Leave-Type:</label>
+                  <input formControlName="leavetype" type="text" class="form-control" id = "leavetype" [(ngModel)] = "leave.leave_type">
+                  <small *ngIf="leavetype?.invalid && leavetype?.touched" class="text-danger">Leave_type is Required</small>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Reason:</label>
+                    <input formControlName="reason" type="text" class="form-control" id = "reason" [(ngModel)] = "leave.reason">
+                    <small *ngIf="reason?.invalid && reason?.touched" class="text-danger">Reason is Required</small>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Status:</label>
+                    <input formControlName="status" type="text" class="form-control" id = "status" [(ngModel)] = "leave.status">
+                    <small *ngIf="status?.invalid && status?.touched" class="text-danger">Status is Required</small>
+                  </div>
+                
+                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary add">Add</button>
+                <button mat-raised-button routerLink="../admin" class="back btn btn-danger " >Back</button>
+              <button mat-raised-button routerLink="../addleaves" class="back btn btn-success view" >View All Leaves</button>
+            </form>
+            </div>
+    </div>
+  </div>

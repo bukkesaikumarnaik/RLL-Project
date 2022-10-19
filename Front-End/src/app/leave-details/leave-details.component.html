@@ -1,0 +1,58 @@
+<!-- <h3> View Leave Details</h3>
+<div>
+    <div>
+        <label> <b> Id: </b></label> {{leave.id}}
+    </div>
+    <div>
+        <label> <b> From_Date: </b></label> {{leave.from_date}}
+    </div>
+    <div>
+        <label> <b> To_Date: </b></label> {{leave.to_date}}
+    </div>
+    <div>
+        <label> <b> Leave_Type: </b></label> {{leave.leave_type}}
+    </div>
+    <div>
+        <label> <b> Reason: </b></label> {{leave.reason}}
+    </div>
+    <div>
+        <label> <b> Status: </b></label> {{leave.status}}
+    </div>
+</div> -->
+
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span>Payroll Management</span>
+    <div class="spacer"></div>
+    <a mat-raised-button routerLink="/user" class="back btn btn-success">Home</a>
+</mat-toolbar>
+<div class="container">
+    <h2 style="margin-top: 10px; margin-bottom: 10px; padding: 30px;"> Leaves</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> From_date</th>
+            <th> To_date </th>
+            <th> Leave_Type</th>
+            <th> Reason </th>
+            <th> Status </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> {{ leave.id }} </td>
+            <td> {{ leave.from_date }} </td>
+            <td> {{ leave.to_date }} </td>
+            <td> {{ leave.leave_type }} </td>
+            <td> {{ leave.reason }} </td>
+            <td> {{ leave.status }} </td>
+            <td>
+               
+                <button (click) = "print()" class = "btn btn-info" style="margin-left: 10px"> Print</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,18 @@
+.icon{
+    width: 30px;
+    margin-left: 5px;
+    margin-right: 8px;
+}
+b{
+   color: rgb(8, 235, 193);
+}
+.spacer{
+    flex: 1 1 auto;
+}
+a:hover{
+    background-color: rgb(8, 235, 193);
+    color: black;
+    font-weight: bolder;
+    transform: scale(1.2);
+    transition: 0.1s;
+}

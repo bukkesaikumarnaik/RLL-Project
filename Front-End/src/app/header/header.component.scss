@@ -1,0 +1,121 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px; 
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html,body
+{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #efefef;
+}
+nav
+{
+    background-color: rgb(238, 232, 232);
+    padding: 29px 5px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+ul
+{
+    display: inline;
+    margin-left: 300px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 40px;
+}
+nav ul li a:hover
+{
+    color: rgb(63, 158, 247);
+}
+.brand-logo
+{
+    text-decoration: none;
+    font-size: 23px;
+    margin-left: 70px; 
+    color: black;
+}
+.navbar-icons
+{
+    display: inline;
+    margin-left: 20px ;
+}
+.fab
+{
+    color: gray;
+    font-size: 20px;
+}
+.fab:hover
+{
+    color: rgb(63, 158, 247);
+}
+.banner
+{
+    margin-top: 0px;
+    height: 550px;
+    background-image: linear-gradient(90deg, rgba(0,0,0,.6),rgba(0,0,0,.6)),url;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+.banner-content
+{
+    padding-top: 210px;
+    color: rgb(6, 6, 6);
+    font-size: larger;
+    font-weight: bolder;
+    background-color: cyan;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.banner-content h1
+{
+    font-size: 7vh;
+    font-weight: 600;
+}
+.banner-content p
+{
+    padding-top: 25px;
+    font-size: 2vh;
+}
+.banner-content button
+{
+    margin-top: 15px;
+    background-color: rgb(114, 172, 226);
+    color: white;
+    padding: 12px 30px;
+    font-weight:600;
+    border: none;
+    border-radius: 6px;
+}
+.info{
+     background-color: rgb(24, 25, 26);
+     color: rgb(245, 245, 239);
+     padding: 7.5px;
+     margin-bottom: 0px;
+     text-align: center;
+ }
+ #h{
+   font-size:large ; 
+ }
+
+.Title{
+     font-weight: 500;
+     font-family: cursive;
+     color: rgba(255, 255, 0, 0.925);
+}
+.getstart{
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-radius: 7px;
+    font-weight: bolder;
+}

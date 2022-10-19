@@ -1,0 +1,63 @@
+<!-- <h3> View Schedule Details</h3>
+<div>
+    <div>
+        <label> <b> Employee_Id: </b></label> {{schedule.id}}
+    </div>
+    <div>
+        <label> <b> Employee_Name: </b></label> {{schedule.emp_name}}
+    </div>
+    <div>
+        <label> <b> Date: </b></label> {{schedule.workdate}}
+    </div>
+    <div>
+        <label> <b> Time: </b></label> {{schedule.worktime}}
+    </div>
+    
+    <div>
+        <label> <b> Shift: </b></label> {{schedule.workshift}}
+    </div>
+
+    <div>
+        <label> <b> Work_Assigned: </b></label> {{schedule.workstatus}}
+    </div>
+    
+</div>
+ -->
+
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span>Payroll Management</span>
+    <div class="spacer"></div>
+    <a mat-raised-button routerLink="/user" class="back btn btn-success">Home</a>
+</mat-toolbar>
+
+<div class="container">
+    <h2 style="margin-top: 10px; margin-bottom: 10px; padding: 30px;"> Schedules</h2>
+<table class = "table table-striped ">
+    <thead >
+        <tr>
+            <th>Id</th>
+            <!-- <th> Employee_Name</th> -->
+            <th> Date</th>
+            <th> Time</th>  
+            <th> Shift</th>
+            <th> Work_Assigned </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td> {{ schedule.emp_id}} </td>
+            <!-- <td> {{ schedule.emp_name }} </td> -->
+            <td> {{ schedule.workdate}} </td>
+            <td> {{ schedule.worktime }} </td>
+            <td> {{ schedule.workshift}} </td>
+            <td> {{ schedule.workstatus}} </td>
+            <!-- <td>
+               
+                
+                <button (click) = "scheduleDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>
+</div>

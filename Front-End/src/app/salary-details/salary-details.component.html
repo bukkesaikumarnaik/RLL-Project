@@ -1,0 +1,63 @@
+<!-- <h3> View Salary Details</h3>
+<div>
+    <div>
+        <label> <b> Employee_Id: </b></label> {{salary.id}}
+    </div>
+    <div>
+        <label> <b> Employee_Name: </b></label> {{salary.emp_name}}
+    </div>
+    <div>
+        <label> <b> Basic_Pay: </b></label> {{salary.basic_pay}}
+    </div>
+    <div>
+        <label> <b> deductions: </b></label> {{salary.deductions}}
+    </div>
+    
+    <div>
+        <label> <b> Net_Pay: </b></label> {{salary.net_pay}}
+    </div>
+
+    <div>
+        <label> <b> Month: </b></label> {{salary.month}}
+    </div>
+    
+</div> -->
+
+
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span>Payroll Management</span>
+    <div class="spacer"></div>
+    <a mat-raised-button routerLink="/user" class="back btn btn-success">Home</a>
+</mat-toolbar>
+<div class="container">
+    <h2 style="margin-top: 10px; margin-bottom: 10px; padding: 30px;"> Salary</h2>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> Employee_Name</th>
+            <th> Basic_Pay</th>
+            <th> Deductions</th>  
+            <th> Net_Pay</th>
+            <th> Month </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> {{ salary.emp_id }} </td>
+            <td> {{ salary.emp_name }} </td>
+            <td> {{ salary.basic_pay}} </td>
+            <td> {{ salary.deductions}} </td>
+            <td> {{ salary.net_pay}} </td>
+            <td> {{ salary.month}} </td>
+            <td>
+               
+                
+                <button (click) = "print()"  class = "btn btn-info" style="margin-left: 10px"> Print</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

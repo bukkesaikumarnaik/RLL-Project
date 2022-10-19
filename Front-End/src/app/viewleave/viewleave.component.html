@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span>Payroll Management</span>
+    <div class="spacer"></div>
+    <a mat-raised-button routerLink="../user" class="back btn btn-success">Home</a>
+</mat-toolbar>
+<div class="container">
+    <h2 style="margin-top: 10px; margin-bottom: 10px; padding: 30px;"> Leaves</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> From_date</th>
+            <th> To_date </th>
+            <th> Leave_Type</th>
+            <th> Reason </th>
+            <th> Status </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let leave of leave" >
+            <td> {{ leave.id }} </td>
+            <td> {{ leave.from_date }} </td>
+            <td> {{ leave.to_date }} </td>
+            <td> {{ leave.leave_type }} </td>
+            <td> {{ leave.reason }} </td>
+            <td> {{ leave.status }} </td>
+            <td>
+               
+                <button (click) = "print()" class = "btn btn-info" style="margin-left: 10px"> Print</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

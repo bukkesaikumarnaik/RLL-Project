@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span> Payroll Management</span>
+       <div class="spacer"></div>
+           <button class="btn btn-danger" (click)="logout()">Logout</button>    
+           <button mat-raised-button routerLink="../admin" class="btn btn-success" style="margin-right: 0px; margin-left: 20px;" >Home</button>
+</mat-toolbar>
+
+
+<div class="container">
+    <h2 style="margin-top: 10px; margin-bottom: 10px; padding: 30px;"> Attendances</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th> Employee_Name</th>
+            <th> Email</th>
+            <th> Date</th>  
+            <th> Status</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of attendance" >
+            <td> {{ employee.id }} </td>
+            <td> {{ employee.emp_name }} </td>
+            <td> {{ employee.email}} </td>
+            <td> {{ employee.date }} </td>
+            <td> {{ employee.status}} </td>
+            
+            <td>
+               
+                <button (click) = "updateAttendance(employee.emp_id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteAttendance(employee.emp_id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+           
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

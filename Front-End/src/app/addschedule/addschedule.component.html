@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span> Payroll Management</span>
+       <div class="spacer"></div>
+           <button class="btn btn-danger" (click)="logout()">Logout</button>    
+           <button mat-raised-button routerLink="../admin" class="btn btn-success" style="margin-right: 0px; margin-left: 20px;" >Home</button>
+</mat-toolbar>
+
+<div class="container" style="width: 750px;">
+    <h2 style="margin-top: 40px; margin-bottom: 30px; padding: 10px;"> Schedules</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Employee_Id</th>
+            <th> Date</th>
+            <th> Time</th>  
+            <th> Shift</th>
+            <th> Work_Assigned </th>
+        </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor = "let schedule of schedule" >
+            <td> {{ schedule.emp_id }} </td>
+            <td> {{ schedule.workdate}} </td>
+            <td> {{ schedule.worktime }} </td>
+            <td> {{ schedule.workshift}} </td>
+            <td> {{ schedule.workstatus}} </td>
+            <!-- <td>
+               
+                <button (click) = "updateSchedule(schedule.emp_id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteSchedule(schedule.emp_id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+         
+            </td> -->
+        </tr>
+    </tbody>
+</table>
+</div>
